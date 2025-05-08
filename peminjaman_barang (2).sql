@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2025 at 12:32 PM
+-- Generation Time: May 08, 2025 at 06:37 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -62,7 +62,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `jenis_barang`, `merk_barang`, `kondisi_barang`) VALUES
-(1, 'Kunci Lab 12 07', 'Kunci Ruangan', '12 07', 'Bagus');
+(1, 'Kunci Lab 12 07', 'Kunci Ruangan', '12 07', 'Bagus'),
+(2, 'Kunci Lab 12 09', 'Kunci Ruangan', '12 09', 'Bagus');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,8 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id`, `id_barang`, `nama_peminjam`, `nim`, `foto_identitas`, `mata_kuliah`, `ruang_kuliah`, `dosen_pengampu`, `jam_mulai_mk`, `jam_selesai_mk`, `tgl_pinjam`, `tgl_balik`, `status_ketersediaan`) VALUES
-(5, 1, 'Rizki', '1907050', 'fakultas.jpg', 'Teknologi Informasi', 'Lab 12 07', 'Bu Malahayati', '16:00:00', '17:15:00', '2025-05-08', '2025-05-08', 'Sudah Dikembalikan');
+(5, 1, 'Rizki', '1907050', 'fakultas.jpg', 'Teknologi Informasi', 'Lab 12 07', 'Bu Malahayati', '16:00:00', '17:15:00', '2025-05-08', '2025-05-08', 'Sudah Dikembalikan'),
+(6, 2, 'Rizki Analdi', '1907050000', 'rektorat.jpeg', 'Teknologi Informasi', 'Lab 12 09', 'Pak Khairan', '17:30:00', '18:10:00', '2025-05-08', '0000-00-00', 'Sedang Dipinjam');
 
 --
 -- Indexes for dumped tables
@@ -130,13 +132,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

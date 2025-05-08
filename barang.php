@@ -132,8 +132,39 @@
                                     <?php 
                                         include 'koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi,"select b.nama_barang,b.jenis_barang,p.status_ketersediaan,p.nama_peminjam,p.nim, p.ruang_kuliah, p.dosen_pengampu, p.jam_selesai_mk
-                                        from barang as b inner join peminjaman as p on b.id_barang = p.id_barang where p.tgl_pinjam=CURDATE() ");
+                                        $data = mysqli_query($koneksi,"SELECT b.nama_barang, b.jenis_barang,
+                                        CASE
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN 'Tidak Tersedia'
+                                            ELSE 'Tersedia'
+                                        END AS status_ketersediaan,
+                                        CASE 
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN p.nama_peminjam
+                                            ELSE NULL
+                                        END AS nama_peminjam,
+                                        CASE 
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN p.nim
+                                            ELSE NULL
+                                        END AS nim,
+                                        CASE 
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN p.ruang_kuliah
+                                            ELSE NULL
+                                        END AS ruang_kuliah,
+                                        CASE 
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN p.dosen_pengampu
+                                            ELSE NULL
+                                        END AS dosen_pengampu,
+                                        CASE 
+                                            WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN p.jam_selesai_mk
+                                            ELSE NULL
+                                        END AS jam_selesai_mk
+                                    FROM 
+                                        barang AS b
+                                    LEFT JOIN (
+                                        SELECT *
+                                        FROM peminjaman
+                                        WHERE tgl_pinjam = CURDATE()
+                                        ORDER BY id DESC
+                                    ) AS p ON b.id_barang = p.id_barang;");
                                         while($d = mysqli_fetch_array($data)){
                                             ?>
                                             <tr>
