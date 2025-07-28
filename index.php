@@ -63,7 +63,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                                <a class="nav-link click-scroll" href="#section_5">Hubungi Kami</a>
                             </li>
                         </ul>
 
@@ -88,7 +88,7 @@
                               <h2 class="text-white">Selamat Datang di </h2>
                               <h2 class="text-white">Sistem Informasi Peminjaman Proyektor dan Kunci Ruangan Lab</h2>
                               <h2 class="text-white">Prodi Teknologi Informasi FST UIN Ar-Raniry </h2> <br><br>
-                              <div class="custom-btn-group">
+                              <div class="custom-btn-group d-flex justify-content-center flex-wrap">
                                 <a href="form-peminjaman.php" class="btn custom-btn smoothscroll me-3">Isi Form Peminjaman</a>
                                 <a href="barang.php" class="btn custom-btn smoothscroll me-3">Cek Ketersediaan Barang</a>
                               </div>
@@ -103,10 +103,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
             </section>
 
-
+            <br><br><br><br><br>
             <section class="about-section section-padding" id="section_2">
                     <div class="d-flex justify-content-center align-items-center vh-100">
-                        <div class="container">
+                    <div class="container my-auto">
                         <div class="row justify-content-center text-center">
                             <div class="col-lg-12 col-12">
                             <h2 class="mb-lg-5 mb-4">About Prodi TI FST UIN Ar-Raniry</h2>
@@ -125,6 +125,7 @@
                 </div>
             </section>
 
+            <br><br><br>
 
             <section class="contact-section section-padding" id="section_5">
                 <div class="container">
@@ -134,13 +135,13 @@
                             <h5 class="site-footer-title mb-4">Prodi TI FST UIN Ar-Raniry</h5>
                       
                             <p class="d-flex border-bottom pb-3 mb-2 me-lg-3">
-                              <span class="me-2">Mon-Fri:</span>
-                              8:00 AM - 6:00 PM
+                              <span class="me-2">Senin-Jumat:</span>
+                              08:00 - 17:00 WIB
                             </p>
                         
                             <p class="d-flex me-lg-3">
-                              <span class="me-2">Sat-Sun:</span>
-                              Closed
+                              <span class="me-2">Sabtu-Minggu:</span>
+                              Tutup
                             </p>
                         
                             <strong>Kopelma Darussalam, Aceh</strong>

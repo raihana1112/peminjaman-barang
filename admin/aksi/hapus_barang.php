@@ -3,11 +3,11 @@
 include '../../koneksi.php';
  
 // menangkap data id yang di kirim dari url
-$id = $_GET['id'];
+$id_barang = $_GET['id_barang'];
  
  
 // menghapus data dari database
-mysqli_query($koneksi,"delete from barang where id='$id'");
+mysqli_query($koneksi,"delete from barang where id_barang='$id_barang'");
 
 
  

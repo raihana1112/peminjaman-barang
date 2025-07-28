@@ -396,6 +396,7 @@ strong {
 }
 
 
+
 /*---------------------------------------
   NAVIGATION BAR & OFFCANVAS              
 -----------------------------------------*/
@@ -725,14 +726,6 @@ strong {
   max-width: 150px;
 }
 
-
-/*---------------------------------------
-  ABOUT SECTOIN              
------------------------------------------*/
-.about-section {
-  margin-top: -300px;
-  margin-bottom: -300px;
-}
 
 /*---------------------------------------
   CUSTOM BLOCK              
@@ -1170,6 +1163,7 @@ footer p{
 @media (max-width: 768px) {
   .custom-btn-group {
     flex-direction: column;
+    
 
   }
 
@@ -1207,6 +1201,9 @@ footer p{
   .contact-info-item {
     width: 72%;
   }
+
+
+
 }
 
 
@@ -1215,8 +1212,13 @@ footer p{
     font-size: 12px;
     padding: 4px 10px;
   }
-}
 
+
+}
+.about-section{
+  margin-top: -200px;
+  margin-bottom: -200px;
+}
 
 iframe {
     width: 100% !important;

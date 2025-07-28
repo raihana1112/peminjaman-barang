@@ -1,3 +1,22 @@
+<?php
+// Array nama hari dalam bahasa Indonesia
+$hariIndo = array(
+    'Sunday' => 'Minggu',
+    'Monday' => 'Senin',
+    'Tuesday' => 'Selasa',
+    'Wednesday' => 'Rabu',
+    'Thursday' => 'Kamis',
+    'Friday' => 'Jumat',
+    'Saturday' => 'Sabtu'
+);
+
+// Ambil nama hari dalam bahasa Inggris
+$hariInggris = date('l');
+
+// Terjemahkan ke bahasa Indonesia
+$hari = $hariIndo[$hariInggris];
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -62,7 +81,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.php#section_5">Contact Us</a>
+                                <a class="nav-link click-scroll" href="index.php#section_5">Hubungi Kami</a>
                             </li>
                         </ul>
 
@@ -105,7 +124,7 @@
                             <h2>Ketersediaan Proyektor dan Kunci Ruangan Lab</h2>
                         </div>
                         <div class="col-lg-12 col-12 text-left mx-auto mb-lg-5 mb-4">
-                            <h4>Ketersediaan hari ini :  <?php echo date('l, d-m-Y'); ?></h4>
+                            <?php echo "<h4>Ketersediaan hari ini : $hari, " . date('d-m-Y') . "</h4>";?> <br>
                         </div>
 
                         <div class="col-lg-12 col-12 mb-3 mb-lg-0" style="margin-top:-60px">
@@ -117,7 +136,7 @@
                                         <tr>
                                             <th>No.</th>
                                             <th>Nama Barang</th>
-                                            <th>Jenis Barang</th>
+                                            <th>Kode Barang</th>
                                             <th>Status Ketersediaan</th>
                                             <th>Nama Peminjam</th>
                                             <th> NIM</th>
@@ -132,7 +151,7 @@
                                     <?php 
                                         include 'koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi,"SELECT b.nama_barang, b.jenis_barang,
+                                        $data = mysqli_query($koneksi,"SELECT b.nama_barang, b.merk_barang,
                                         CASE
                                             WHEN p.status_ketersediaan = 'Sedang Dipinjam' THEN 'Tidak Tersedia'
                                             ELSE 'Tersedia'
@@ -170,7 +189,7 @@
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
                                                 <td><?php echo $d['nama_barang']; ?></td>
-                                                <td><?php echo $d['jenis_barang']; ?></td>
+                                                <td><?php echo $d['merk_barang']; ?></td>
                                                 <td><?php echo $d['status_ketersediaan']; ?></td>
                                                 <td><?php echo $d['nama_peminjam']; ?></td>
                                                 <td><?php echo $d['nim']; ?></td>
